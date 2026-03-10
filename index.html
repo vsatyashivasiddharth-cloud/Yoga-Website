@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VA YOGA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">🧘 VA<span>YOGA</span></a>
+            <ul class="nav-links">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#animals">SURYA NAMASKAR'S</a></li>
+                <li><a href="#visit">DETAILS</a></li>
+                <li><button class="btn-small" onclick="bookSeat()">  BOOK SEAT</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                </h1><h1>FIRST STEP TOWARDS<span> PEACE</span></h1>
+                <p>THE SECRET TO A BALANCED LIFE.</p>
+                <div class="hero-btns">
+                    <a href="#animals" class="btn-primary">Explore Poses</a>
+                    <a href="#visit" class="btn-secondary">More Details</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="stats">
+        <div class="container grid-3">
+            <div class="stat-item"><h3>20+</h3><p>Years of Experience</p></div>
+            <div class="stat-item"><h3>100+</h3><p>TRAINERS</p></div>
+            <div class="stat-item"><h3>100%</h3><p>IMPROVEMENT</p></div>
+        </div>
+    </section>
+
+    <section id="animals" class="gallery">
+        <div class="container">
+            <h2 class="section-title">SURYA NAMASKAR'S</h2>
+            <div class="animal-grid">
+                <div class="card">
+                    <div class="card-img"><img src="https://www.artofliving.org/in-en/app/uploads/2023/10/Surya-Namaskar-step-1.jpg" alt="Pranamasana"></div>
+                    <div class="card-body">
+                        <span>step-1</span>
+                        <h3>Pranamasana (Prayer pose)</h3>
+                        <button class="btn-view" onclick="showPose('Stand at the edge of your mat, keep your feet together and balance your weight equally on both feet. Expand your chest and relax your shoulders. As you breathe in, lift both arms up from the sides, and as you exhale, bring your palms together in front of the chest in a prayer position.')">
+                             View Instructions
+                         </button>
+                        
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img"><img src="https://www.artofliving.org/in-en/app/uploads/2023/10/Surya-Namaskar-step-2.jpg" alt="Hastauttanasana"></div>
+                    <div class="card-body">
+                        <span>Step-2</span>
+                        <h3> Hastauttanasana (Raised arms pose)</h3>
+                        <button class="btn-view" onclick="showPose('Breathing in, lift the arms up and back, keeping the biceps close to the ears. In this pose, the effort is to stretch the whole body up from the heels to the tips of the fingers.')">
+                             View Instructions
+                         </button>
+
+
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img"><img src="https://www.artofliving.org/in-en/app/uploads/2023/10/Surya-Namaskar-step-3.jpg" alt="Hastapadasana"></div>
+                    <div class="card-body">
+                        <span>Step-3</span>
+                        <h3>Hastapadasana (Standing forward bend)</h3>
+                       <button class="btn-view" onclick="showPose('Breathing out, bend forward from the waist keeping the spine erect. As you exhale completely, bring the hands down to the floor beside the feet.')">
+                             View Instructions
+                         </button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img"><img src="https://www.artofliving.org/in-en/app/uploads/2023/10/Surya-Namaskar-step-4.jpg" alt="Ashwa Sanchalanasana"></div>
+                    <div class="card-body">
+                        <span>Step-4</span>
+                        <h3>Ashwa Sanchalanasana (Equestrian pose)</h3>
+                          <button class="btn-view" onclick="showPose('Breathing in, push your right leg back, as far back as possible. Bring the right knee to the floor and look up.')">
+                             View Instructions
+                         </button>
+                    </div>
+                </div>
+                 <div class="card">
+                    <div class="card-img"><img src="https://www.artofliving.org/in-en/app/uploads/2023/10/Surya-Namaskar-step-5.jpg" alt="Dandasana"></div>
+                    <div class="card-body">
+                        <span>Step-5</span>
+                        <h3>Dandasana (Stick pose)</h3>
+                          <button class="btn-view" onclick="showPose('As you breathe in, take the left leg back and bring the whole body in a straight line.')">
+                             View Instructions
+                         </button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img"><img src="https://www.artofliving.org/in-en/app/uploads/2023/10/Surya-Namaskar-step-6.jpg" alt="Ashtanga Namaskara"></div>
+                    <div class="card-body">
+                        <span>Step-6</span>
+                        <h3>Ashtanga Namaskara (Salute with eight parts or points)</h3>
+                          <button class="btn-view" onclick="showPose('Gently bring your knees down to the floor and exhale. Take the hips back slightly, slide forward, rest your chest and chin on the floor. Raise your posterior a little bit. The two hands, two feet, two knees, chest and chin (eight parts of the body) should touch the floor.')">
+                             View Instructions
+                         </button>
+                    </div>
+                </div>
+                 <div class="card">
+                    <div class="card-img"><img src="https://www.artofliving.org/in-en/app/uploads/2023/10/Surya-Namaskar-step-7.jpg" alt="Bhujangasana"></div>
+                    <div class="card-body">
+                        <span>Step-7</span>
+                        <h3>Bhujangasana (Cobra pose)</h3>
+                          <button class="btn-view" onclick="showPose('Slide forward and raise the chest up into the Cobra pose. You may keep your elbows bent in this pose with the shoulders away from the ears. Look up at the ceiling.')">
+                             View Instructions
+                         </button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img"><img src="https://www.artofliving.org/in-en/app/uploads/2023/10/Surya-Namaskar-step-8.jpg" alt="Adho Mukha Svanasana"></div>
+                    <div class="card-body">
+                        <span>Step-8</span>
+                        <h3>Adho Mukha Svanasana (Downward facing dog pose)</h3>
+                          <button class="btn-view" onclick="showPose('Breathing out, lift the hips and the tailbone up to bring the body into an inverted ‘V’ pose.')">
+                             View Instructions
+                         </button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img"><img src="https://www.artofliving.org/in-en/app/uploads/2023/10/Surya-Namaskar-step-9.jpg" alt="Ashwa Sanchalanasana"></div>
+                    <div class="card-body">
+                        <span>Step-9</span>
+                        <h3>Ashwa Sanchalanasana (Equestrian pose)</h3>
+                          <button class="btn-view" onclick="showPose('Breathing in, bring the right foot forward in between the two hands. The left knee goes down on the floor. Press the hips down and look up.')">
+                             View Instructions
+                         </button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img"><img src="https://www.artofliving.org/in-en/app/uploads/2023/10/Surya-Namaskar-step-10.jpg" alt="Hastapadasana"></div>
+                    <div class="card-body">
+                        <span>Step-10</span>
+                        <h3>Hastapadasana (Standing forward bend)</h3>
+                          <button class="btn-view" onclick="showPose('Breathing out, bring the left foot forward. Keep the palms on the floor. You may bend the knees, if necessary.')">
+                             View Instructions
+                         </button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img"><img src="https://www.artofliving.org/in-en/app/uploads/2023/10/Surya-Namaskar-step-11.jpg" alt="Hastauttanasana"></div>
+                    <div class="card-body">
+                        <span>Step-11</span>
+                        <h3>Hastauttanasana (Raised arms pose)</h3>
+                          <button class="btn-view" onclick="showPose('Breathing in, roll the spine up. Raise the hands up and bend backward a little bit, pushing the hips slightly outward.')">
+                             View Instructions
+                         </button>
+                    </div>
+                </div>
+                 <div class="card">
+                    <div class="card-img"><img src="https://www.artofliving.org/in-en/app/uploads/2023/10/Surya-Namaskar-step-12.jpg" alt="Tadasana"></div>
+                    <div class="card-body">
+                        <span>Step-12</span>
+                        <h3>Tadasana (Mountain Pose)</h3>
+                          <button class="btn-view" onclick="showPose('As you exhale, first straighten the body, then bring the arms down. Relax in this position and observe the sensations in your body.')">
+                             View Instructions
+                         </button>
+                    </div>
+                </div>
+                 <div class="card">
+                    <div class="card-img"><img src="https://www.artofliving.org/in-en/app/uploads/2023/10/Surya-Namaskar-step-12.jpg" alt="Tadasana"></div>
+                    <div class="card-body">
+                        <span>Step-12</span>
+                        <h3>Tadasana (Mountain Pose)</h3>
+                          <button class="btn-view" onclick="showPose('As you exhale, first straighten the body, then bring the arms down. Relax in this position and observe the sensations in your body.')">
+                             View Instructions
+                         </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="visit" class="visit-section">
+    <div class="container">
+        <h2 class="section-title">GET CLARIFIED</h2>
+        
+        <div class="plan-grid">
+            <div class="plan-card info-card">
+                <h3><i class="icon">🧘</i> Essentials</h3>
+                <ul>
+                    <li><strong>Yoga Mat:</strong> We provide mats, but feel free to bring your own.</li>
+                    <li><strong>Water:</strong> Stay hydrated! We have a refill station.</li>
+                    <li><strong>Attire:</strong> Wear comfortable, stretchable clothing.</li>
+                    <li><strong>Arrival:</strong> Please arrive 10 minutes before class starts.</li>
+                </ul>
+            </div>
+
+            <div class="plan-card pricing-card">
+                <h3><i class="icon">🎟️</i> Class Passes</h3>
+                <div class="price-item highlighted">
+                    <span>1-MONTH</span>
+                    <span class="price">₹2999</span>
+                </div>
+                <div class="price-item highlighted">
+                    <span>3-MONTHS</span>
+                    <span class="price">₹7999</span>
+                </div>
+                <div class="price-item highlighted">
+                    <span>6-MONTHS</s></span>
+                    <span class="price">₹14999</span>
+                </div>
+                <div class="price-item highlighted">
+                    <span>12-MONTHS</s></span>
+                    <span class="price">₹29999</span>
+                </div>
+                <br><button class="btn-primary" onclick="calculateDiscount(2999)">Check Student Price</button>
+            </div>
+
+            <div class="plan-card hours-card">
+                <h3><i class="icon">⏰</i>TIMMINGS</h3>
+                <table class="hours-table">
+                    <tr><td>Mon - Fri</td><td>6:00 AM - 6:00 PM</td></tr>
+                    <tr><td>Saturday</td><td>6:00 AM - 7:00 PM</td></tr>
+                    <tr><td>Sunday</td><td>6:00 AM - 5:00 PM</td></tr>
+                </table>
+                <p class="note">*Closed on Public Holidays</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <footer class="footer">
+    <div class="container">
+        <p>&copy; 2026 VA Yoga Studio. All Rights Reserved.</p>
+    </div>
+</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

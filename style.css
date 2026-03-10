@@ -1,0 +1,342 @@
+/* 1. SETUP & VARIABLES */
+:root {
+    --primary: #1a3c34;    /* Deep Jungle Green */
+    --accent: #f2a900;     /* Golden Amber */
+    --light: #f9f9f9;
+    --dark: #111111;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--light);
+    color: var(--dark);
+    line-height: 1.7;
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 2rem;
+}
+
+/* 2. NAVIGATION */
+.navbar {
+    background: white;
+    padding: 1.5rem 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--primary);
+    letter-spacing: 1px;
+}
+
+.logo span { color: var(--accent); }
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--dark);
+    margin-left: 2rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.nav-links li a:hover { color: var(--accent); }
+
+.btn-small {
+    background: var(--primary);
+    color: white !important;
+    padding: 0.5rem 1.2rem;
+    border-radius: 5px;
+}
+
+/* 3. HERO SECTION */
+.hero {
+    height: 80vh;
+    background: url('https://t3.ftcdn.net/jpg/03/30/49/72/360_F_330497250_ZzWZ6qrLWJ973kgTLI2foKjDoLBtIPbi.jpg') no-repeat center center/cover;
+    color: white;
+}
+
+.hero-overlay {
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center; /* Keeps text vertically centered */
+    
+    /* 1. Change this to flex-start to move the box to the left side */
+    justify-content: flex-start; 
+    
+    /* 2. Use padding-left to push it away from the edge. 
+       20% will put it roughly halfway between the left wall and the center. */
+    padding-left: 10%; 
+    
+    /* 3. Reset the right padding so it doesn't interfere */
+    padding-right: 0; 
+    
+    text-align: center;
+}
+
+
+.hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content h1 span { color: var(--accent); }
+
+.hero-content p { font-size: 1.2rem; margin-bottom: 2rem; }
+
+.btn-primary, .btn-secondary {
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.btn-primary { background: var(--accent); color: var(--dark); }
+.btn-secondary { border: 2px solid white; color: white; }
+
+/* 4. STATS & GALLERY */
+.stats {
+    background: var(--primary);
+    color: white;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.section-title {
+    text-align: center;
+    margin: 4rem 0 3rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+}
+
+.animal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 4rem;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: var(--transition);
+}
+
+.card:hover { transform: translateY(-10px); }
+
+.card-img img { width: 100%; height: 250px; object-fit: fill; }
+
+.card-body { padding: 1.5rem; }
+
+.card-body span {
+    color: var(--accent);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.card-body h3 { margin: 0.5rem 0; }
+
+.footer {
+    background: var(--dark);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .nav-links { display: none; } /* Hide links on mobile for simplicity */
+    .hero-content h1 { font-size: 2.5rem; }
+    .grid-3 { grid-template-columns: 1fr; }
+}
+/* 5. PLAN YOUR VISIT STYLING */
+.visit-section {
+    padding: 4rem 0;
+    background-color: white;
+}
+
+.plan-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.plan-card {
+    padding: 2rem;
+    background: var(--light);
+    border-radius: 12px;
+    border-top: 5px solid var(--primary);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.plan-card h3 {
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.icon { margin-right: 10px; font-style: normal; }
+
+/* Essentials List */
+.info-card ul {
+    list-style: none;
+    text-align: left;
+}
+
+.info-card li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.info-card li::before {
+    content: "✔";
+    color: var(--accent);
+    position: absolute;
+    left: 0;
+}
+
+/* Pricing Section */
+.price-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.price-item.highlighted {
+    color: var(--primary);
+    font-weight: bold;
+    border-bottom: 2px solid var(--accent);
+}
+
+.price { font-weight: 700; color: var(--primary); }
+
+/* Hours Table */
+.hours-table {
+    width: 100%;
+    text-align: left;
+}
+
+.hours-table td { padding: 8px 0; }
+
+.note {
+    font-size: 0.8rem;
+    color: #777;
+    margin-top: 1rem;
+}
+
+/* 1. Ensure the card itself is a flex container */
+.card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: var(--transition);
+    
+    /* ADD THESE TWO LINES */
+    display: flex;
+    flex-direction: column;
+}
+
+/* 2. Make the body grow to fill the card space */
+.card-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* This makes the body fill the remaining height of the card */
+}
+
+/* 3. Push the button to the bottom */
+.btn-view {
+    background: var(--primary);
+    color: white;
+    padding: 0.6rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.8rem;
+    width: 100%;
+    
+    /* CHANGE THIS LINE */
+    margin-top: auto; 
+    
+    transition: var(--transition);
+}
+.btn-small {
+    background: var(--primary);
+    color: white !important;
+    padding: 0.5rem 1.2rem;
+    border-radius: 5px;
+    border: none;             /* Removes the default button border */
+    cursor: pointer;          /* Makes it look clickable */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-small:hover {
+    background: var(--accent);
+    color: var(--dark) !important;
+}
+.btn-small {
+    background: var(--primary);
+    color: white !important;
+    padding: 0.5rem 1.2rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    transition: var(--transition);
+
+    /* ADD THIS LINE */
+    /* Increasing this number (e.g., to 3rem or 4rem) pushes it further right */
+    margin-left: 3rem; 
+}
